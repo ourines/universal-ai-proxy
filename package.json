@@ -1,5 +1,5 @@
 {
-  "name": "groq-k2-anthropic-proxy",
+  "name": "universal-ai-proxy",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
@@ -15,8 +15,8 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "wrangler": "^4.4.0",
-    "@types/node": "^22.10.2",
-    "@types/uuid": "^10.0.0"
+    "@types/node": "^24.0.14",
+    "@types/uuid": "^10.0.0",
+    "wrangler": "^4.24.3"
   }
 }

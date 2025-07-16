@@ -6,9 +6,27 @@
     "strict": true,
     "skipLibCheck": true,
     "lib": [
-      "ESNext"
+      "ESNext",
     ],
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/types/*": ["src/types/*"],
+      "@/config/*": ["src/config/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/middleware/*": ["src/middleware/*"],
+      "@/controllers/*": ["src/controllers/*"],
+      "@/services/*": ["src/services/*"],
+      "@/routes/*": ["src/routes/*"]
+    }
   },
+  "include": [
+    "src/**/*",
+    "worker-configuration.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
