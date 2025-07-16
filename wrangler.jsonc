@@ -1,35 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "groq-k2-anthropic-proxy",
+  "name": "universal-ai-proxy",
   "main": "src/index.ts",
   "compatibility_date": "2025-07-16",
   "compatibility_flags": [
     "nodejs_compat"
   ],
-  "kv_namespaces": [
-    {
-      "binding": "KV",
-      "id": "85f44adb92124b498c7a41dd337bfcea"
-    }
-  ]
-  // "r2_buckets": [
-  //   {
-  //     "binding": "MY_BUCKET",
-  //     "bucket_name": "my-bucket"
-  //   }
-  // ],
-  // "d1_databases": [
-  //   {
-  //     "binding": "MY_DB",
-  //     "database_name": "my-database",
-  //     "database_id": ""
-  //   }
-  // ],
-  // "ai": {
-  //   "binding": "AI"
-  // },
-  // "observability": {
-  //   "enabled": true,
-  //   "head_sampling_rate": 1
-  // }
 }
