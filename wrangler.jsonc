@@ -8,5 +8,11 @@
   ],
   "observability": {
     "enabled": true
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "PROXY_LOAD_BALANCER_KV",
+      "id": "7557cebfc77a48baa4582bd62599df81"
+    }
+  ]
 }

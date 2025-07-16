@@ -14,6 +14,7 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { createApiRoutes } from './routes/api'
+import { createLoadBalancerRoutes } from './routes/loadBalancer'
 import { ConfigController } from './controllers/config'
 import { errorMiddleware } from './middleware/error'
 
@@ -30,5 +31,8 @@ app.get('/', ConfigController.getInfo)
 
 // Mount API routes with UUID prefix
 app.route('/:uuid', createApiRoutes())
+
+// Mount load balancer routes with UUID prefix (separate endpoint)
+app.route('/:uuid/lb', createLoadBalancerRoutes())
 
 export default app

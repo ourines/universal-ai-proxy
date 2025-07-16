@@ -4,6 +4,7 @@ import { ClaudeController } from '../controllers/claude'
 import { GeminiController } from '../controllers/gemini'
 import { ModelsController } from '../controllers/models'
 import { ConfigController } from '../controllers/config'
+import { createLoadBalancerRoutes } from './loadBalancer'
 
 
 /**

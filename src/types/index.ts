@@ -99,3 +99,36 @@ export interface TargetConfig {
   maxTokens: number
 }
 
+// Load balancing types
+export interface ApiKeyConfig {
+  key: string
+  weight?: number
+  lastUsed?: number
+  failureCount?: number
+  isActive?: boolean
+  // Extended config for multiple targets
+  provider?: string
+  baseURL?: string
+  model?: string
+  maxTokens?: number
+}
+
+export interface LoadBalancerConfig {
+  enabled: boolean
+  apiKeys: ApiKeyConfig[]
+  strategy: 'round-robin' | 'time-window' | 'weighted'
+  windowSize: number // in minutes
+}
+
+export interface LoadBalancerStats {
+  totalRequests: number
+  successfulRequests: number
+  failedRequests: number
+  lastUsed: number
+  apiKeyStats: Record<string, {
+    requests: number
+    failures: number
+    lastUsed: number
+  }>
+}
+

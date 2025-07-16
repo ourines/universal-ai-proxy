@@ -8,6 +8,7 @@ import { AuthorizationError } from '../utils/errors'
  */
 export async function uuidValidationMiddleware(c: Context<{ Bindings: CloudflareBindings }>, next: Next) {
   const uuid = c.req.param('uuid')
+  console.log('uuid', uuid)
   const uuidCheck = validateUuid(uuid || '', c.env)
   
   if (!uuidCheck.valid) {
