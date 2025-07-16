@@ -1,0 +1,20 @@
+name = "groq-anthropic-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[env.development]
+vars = { }
+
+[env.production]
+vars = { }
+
+# KV namespace for caching
+[[kv_namespaces]]
+binding = "KV"
+preview_id = "preview_kv_id"
+id = "production_kv_id"
+
+# Environment variables (set these in Cloudflare dashboard or via wrangler secret)
+# GROQ_API_KEY
+# ANTHROPIC_API_KEY  
+# OPENAI_API_KEY
