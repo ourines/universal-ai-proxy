@@ -556,7 +556,7 @@ app.get('/v1/config', (c) => {
  * Health check and info endpoint
  */
 app.get('/', (c) => {
-  return c.json({ 
+  const info = {
     name: 'Universal AI API Proxy',
     message: 'Universal AI API Proxy is running 💡',
     version: '1.0.0',
@@ -581,9 +581,10 @@ app.get('/', (c) => {
       'Claude (Anthropic)',
       'Gemini (Google)'
     ],
-    github: 'https://github.com/your-username/universal-ai-proxy',
+    github: 'https://github.com/ourines/universal-ai-proxy',
     license: 'MIT'
-  })
+  }
+  return c.json(info)
 })
 
 export default app
